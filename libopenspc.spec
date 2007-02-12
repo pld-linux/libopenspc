@@ -1,5 +1,5 @@
 Summary:	OpenSPC - SPC file player
-Summary(pl.UTF-8):   OpenSPC - odtwarzacz plików SPC
+Summary(pl.UTF-8):	OpenSPC - odtwarzacz plików SPC
 Name:		libopenspc
 Version:	0.3.99
 %define	snap	20050926
@@ -21,7 +21,7 @@ OpenSPC - odtwarzacz plików SPC.
 
 %package devel
 Summary:	Header files for OpenSPC library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki OpenSPC
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki OpenSPC
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	zlib-devel
@@ -34,7 +34,7 @@ Pliki nagłówkowe biblioteki OpenSPC.
 
 %package static
 Summary:	Static OpenSPC library
-Summary(pl.UTF-8):   Statyczna biblioteka OpenSPC
+Summary(pl.UTF-8):	Statyczna biblioteka OpenSPC
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
