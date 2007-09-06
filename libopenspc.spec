@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	OpenSPC - odtwarzacz plików SPC
 Name:		libopenspc
 Version:	0.3.99
 %define	snap	20050926
-Release:	0.%{snap}.1
+Release:	0.%{snap}.2
 # SNEeSe in on other, GPL-compatible license, but interface part implies LGPL
 License:	LGPL v2+
 Group:		Libraries
