@@ -1,8 +1,8 @@
+%define	snap	20050926
 Summary:	OpenSPC - SPC file player
 Summary(pl.UTF-8):	OpenSPC - odtwarzacz plików SPC
 Name:		libopenspc
 Version:	0.3.99
-%define	snap	20050926
 Release:	0.%{snap}.2
 # SNEeSe in on other, GPL-compatible license, but interface part implies LGPL
 License:	LGPL v2+
@@ -12,6 +12,8 @@ Source0:	http://home.comcast.net/~brad.martin1/OpenSPC_snap-%{snap}.tar.bz2
 URL:		http://home.comcast.net/~brad.martin1/
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%undefine	__cxx
 
 %description
 OpenSPC - SPC file player.
