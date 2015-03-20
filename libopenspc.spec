@@ -1,15 +1,19 @@
 %define	snap	20050926
+%define	rel 3
 Summary:	OpenSPC - SPC file player
 Summary(pl.UTF-8):	OpenSPC - odtwarzacz plików SPC
 Name:		libopenspc
 Version:	0.3.99
-Release:	0.%{snap}.2
+Release:	0.%{snap}.%{rel}
 # SNEeSe in on other, GPL-compatible license, but interface part implies LGPL
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://home.comcast.net/~brad.martin1/OpenSPC_snap-%{snap}.tar.bz2
 # Source0-md5:	a7b4e60e3780bb06608c1bd73f1bf1b4
 URL:		http://home.comcast.net/~brad.martin1/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -53,6 +57,11 @@ mv -f libopenspc/SNEeSe/LICENSE LICENSE.SNEeSe
 mv -f libopenspc/SNEeSe/README README.SNEeSe
 
 %build
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__autoheader}
+%{__automake}
 %configure
 %{__make}
 
@@ -73,6 +82,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog README LICENSE.SNEeSe README.SNEeSe
 %attr(755,root,root) %{_bindir}/ospcplay
 %attr(755,root,root) %{_libdir}/libopenspc.so.*.*.*
+%ghost %{_libdir}/libopenspc.so.0
 
 %files devel
 %defattr(644,root,root,755)
